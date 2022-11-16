@@ -1,0 +1,67 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Build develop
+
+on:
+  push:
+    branches: [ develop ]
+  # pull_request:
+  #   branches: [ develop ]
+
+concurrency:
+  group: development
+  cancel-in-progress: true
+
+env:
+  REACT_APP_API_DNS: http://knowme-hiring-api-dev.knowmehub.com/api/v1
+  REACT_APP_STRIPE_KEY: pk_test_51LBw85ICDshYAYsKZmZyRPUwTxTId3DfxMki2Es1lsHYqFoe52Yo2SnY35o4icugH1on0jdujgeEJ4olcCs52rf800TQwUcawj
+  REACT_APP_FIREBASE_CONFIG: '{"apiKey":"AIzaSyDOnwVHNuwMDH-DFmo3sIbXDEslfbrPB8M","authDomain":"knowme-dev-536dd.firebaseapp.com","projectId":"knowme-dev-536dd","storageBucket":"knowme-dev-536dd.appspot.com","messagingSenderId":"798561612460","appId":"1:798561612460:web:079811ed577086267fe509","measurementId":"G-JX0K9GT3KG"}'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+
+    - name: Install SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.KEY_PEM }} 
+        known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+    - name: Add known_hosts
+      run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+    - name: Remove npm prepare hook
+      run: npm set-script prepare "echo prepare"
+
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Build
+      run: yarn build
+    
+    - name: Gzip build bundle
+      run: tar -zcvf build.tar.gz build/
+
+    - name: Push bundle to host
+      run: scp build.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:~/knowme-hiring-web/build.tar.gz
+
+    # - name: Delete current bundle
+    #   run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "rm ~/knowme-hiring-web/build.tar.gz"
+
+    - name: Unzip bundle
+      run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "tar -xvzf ~/knowme-hiring-web/build.tar.gz -C ~/knowme-hiring-web"

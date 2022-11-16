@@ -1,0 +1,71 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Build master
+
+on:
+  push:
+    branches: [ master ]
+  # pull_request:
+  #   branches: [ master ]
+
+concurrency:
+  group: production
+  cancel-in-progress: true
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  REACT_APP_API_DNS: https://hm-api.knowmejobs.com/api/v1
+  REACT_APP_STRIPE_KEY: pk_test_51LBw85ICDshYAYsKZmZyRPUwTxTId3DfxMki2Es1lsHYqFoe52Yo2SnY35o4icugH1on0jdujgeEJ4olcCs52rf800TQwUcawj
+  REACT_APP_FIREBASE_CONFIG: '{"apiKey":"AIzaSyDOnwVHNuwMDH-DFmo3sIbXDEslfbrPB8M","authDomain":"knowme-dev-536dd.firebaseapp.com","projectId":"knowme-dev-536dd","storageBucket":"knowme-dev-536dd.appspot.com","messagingSenderId":"798561612460","appId":"1:798561612460:web:079811ed577086267fe509","measurementId":"G-JX0K9GT3KG"}'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install awscli
+
+    - name: Remove npm prepare hook
+      run: npm set-script prepare "echo prepare"
+
+    - name: Install yarn
+      run: npm install -g yarn
+
+    - name: Install dependencies
+      run: yarn install
+
+    - name: Build
+      run: yarn build
+
+    - name: Set aws_access_key_id
+      run: aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+
+    - name: Set aws_secret_access_key
+      run: aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+
+    - name: Sync build bundle to S3
+      run: aws s3 sync ./build s3://$AWS_S3_BUCKET
+      env:
+        AWS_S3_BUCKET: app.knowmejobs.com
+
+    - name: Create invalidation
+      run: aws cloudfront create-invalidation --distribution-id $CDN_DISTRIBUTION_ID --paths "/*"
+      env:
+        CDN_DISTRIBUTION_ID: E3CEKMFF2Z8BSK

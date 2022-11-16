@@ -1,0 +1,46 @@
+.pointer {
+  cursor: pointer;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/**
+ * @size helpers
+ */
+.w-100 {
+  width: 100% !important;
+}
+
+/**
+ * @fonts helpers
+ */
+.fw-hero {
+  font-weight: 900;
+}
+.fw-bold {
+  font-weight: 700;
+}
+.fw-semi-bold {
+  font-weight: 500;
+}
+
+.text-tiny {
+  font-size: 16px;
+}
+.text-small {
+  font-size: 16px;
+}
+.text-medium {
+  font-size: 14px;
+}
+.text-large {
+  font-size: 12px;
+}
