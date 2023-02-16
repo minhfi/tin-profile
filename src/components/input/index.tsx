@@ -4,7 +4,6 @@ import { IconMessageError, IconVisibility, IconVisibilityOff } from 'src/icons'
 
 import { Message } from '../message'
 import { Label } from '../label'
-import { PasswordChecker } from '../password-checker'
 import { TextField, TextInput, STError } from './styled'
 
 export interface InputBaseProps {
@@ -14,12 +13,11 @@ export interface InputBaseProps {
   error?: string
   mb?: number
   sx?: SxProps
-  isCheckPassword?: boolean
 }
 
 export type InputProps = InputBaseProps & Omit<TextFieldProps, 'error'>
 
-export const Input: FC<InputProps> = ({ label, error, mb, isCheckPassword, ...props }) => {
+export const Input: FC<InputProps> = ({ label, error, mb, ...props }) => {
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const toggleShowPassword = useCallback(() => setShowPassword(!showPassword), [showPassword])
 
@@ -50,14 +48,10 @@ export const Input: FC<InputProps> = ({ label, error, mb, isCheckPassword, ...pr
         InputProps={InputProps}
       />
 
-      {error && !isCheckPassword && (
+      {error && (
         <STError>
           <IconMessageError/> <Message showMessage={!!error} status="error">{error}</Message>
         </STError>
-      )}
-
-      {isCheckPassword && (
-        <PasswordChecker password={props.value as string}/>
       )}
     </TextInput>
   )
@@ -65,6 +59,5 @@ export const Input: FC<InputProps> = ({ label, error, mb, isCheckPassword, ...pr
 
 Input.defaultProps = {
   type: 'text',
-  mb: 4,
-  isCheckPassword: false
+  mb: 4
 }

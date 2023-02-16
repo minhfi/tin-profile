@@ -55,5 +55,5 @@ export const Button: FC<IButtonProps & ButtonProps<'span', { component?: 'span' 
 
 Button.defaultProps = {
   order: 'primary',
-  height: 56
+  height: 47
 }

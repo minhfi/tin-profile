@@ -6,9 +6,11 @@ const ButtonBase = styled(Button)<IButtonProps>(({ theme, ...props }) => css`
   width: ${props.width ? props.width + 'px' : 'auto'};
   height: ${props.height}px;
 
-  ${{ ...theme.typography['body2-bold'] }};
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
   
-  padding: ${theme.spacing(0, 2)};
+  padding: 0 59px;
   text-transform: unset;
   border-radius: 16px;
 
@@ -18,71 +20,73 @@ const ButtonBase = styled(Button)<IButtonProps>(({ theme, ...props }) => css`
 `)
 
 export const ButtonPrimary = styled(ButtonBase)<IButtonProps>(({ theme, ...props }) => `
-  color: ${theme.colors['--color-neutral-theme-700']} !important;
-  background-color: ${props.background || `${theme.colors['--color-primary-400']} !important`} ;
+  color: ${theme.colors['--color-primary-400']} !important;
+  background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
+  border: 1px solid ${props.background ? 'transparent' : theme.colors['--color-neutral-theme-200']};
+  border-radius: 30px;
 
   &:hover {
-    background-color: ${props.background || `${theme.colors['--color-primary-300']} !important`} ;
+    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
   }
 
   &:focus {
-    background-color: ${props.background || `${theme.colors['--color-primary-300']} !important`} ;
+    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
   }
 
   &:active {
-    background-color: ${props.background || `${theme.colors['--color-primary-400']} !important`} ;
+    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
   }
 
   &:disabled {
     color: ${theme.colors['--color-neutral-theme-50']} !important;
-    background-color: ${theme.colors['--color-neutral-theme-200']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 `)
 
 export const ButtonSecondary = styled(ButtonBase)<IButtonProps>(({ theme, background }) => `
   border: 1px solid ${background ? 'transparent' : theme.colors['--color-neutral-theme-300']};
 
-  color: ${theme.colors['--color-neutral-theme-700']} !important;
+  color: ${theme.colors['--color-neutral-theme-400']} !important;
   background-color: ${background || theme.colors['--color-neutral-theme-50']} !important;
 
   &:hover {
     border: none;
-    background-color: ${theme.colors['--color-neutral-theme-100']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:focus {
     border: none;
-    background-color: ${theme.colors['--color-neutral-theme-100']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:active {
     border: none;
-    background-color: ${theme.colors['--color-neutral-theme-200']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:disabled {
-    border: 1px solid ${theme.colors['--color-neutral-theme-200']};
-    color: ${theme.colors['--color-neutral-theme-200']} !important;
+    border: 1px solid ${theme.colors['--color-neutral-theme-400']};
+    color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 `)
 
 export const ButtonTertiary = styled(ButtonBase)<IButtonProps>(({ theme }) => `
-  color: ${theme.colors['--color-neutral-theme-700']} !important;
+  color: ${theme.colors['--color-neutral-theme-400']} !important;
   background-color: transparent !important;
 
   &:hover {
-    background-color: ${theme.colors['--color-neutral-theme-100']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:focus {
-    background-color: ${theme.colors['--color-neutral-theme-100']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:active {
-    background-color: ${theme.colors['--color-neutral-theme-200']} !important;
+    background-color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 
   &:disabled {
-    color: ${theme.colors['--color-neutral-theme-200']} !important;
+    color: ${theme.colors['--color-neutral-theme-400']} !important;
   }
 `)

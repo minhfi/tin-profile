@@ -5,7 +5,7 @@ import { getApiErrorMessage } from 'src/utils/axios.utils'
 import { StorageUtil } from 'src/utils/storage.util'
 import { browserHistory } from 'src/router/history'
 import { AUTH_FALLBACK_KEY } from 'src/constants'
-import { AuthApi, ProfileApi } from 'src/api'
+import { AuthApi } from 'src/api'
 import { generate } from 'src/router/generate'
 import { EMessage } from 'src/enums'
 
@@ -24,7 +24,8 @@ import { EAuthRoutes } from './../../module/auth/routes.enum'
 function * getProfile(action: { type: typeof AUTH_GET_PROFILE }) {
   try {
     // workaround for promise with generator function
-    const { data: profile }: Awaited<ReturnType<typeof ProfileApi.detail>> = yield ProfileApi.detail()
+    const profile = {}
+    // const { data: profile }: Awaited<ReturnType<typeof ProfileApi.detail>> = yield ProfileApi.detail()
 
     yield put({
       type: AUTH_SET_CREDENTIALS,
