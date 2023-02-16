@@ -84,7 +84,7 @@ export const MessagesContainer: FC = () => {
                 </Box>
                 <Typography
                   component="div"
-                  variant="meta-medium"
+                  variant="meta1"
                   sx={{
                     wordBreak: 'break-word',
                     lineHeight: '24px',
@@ -95,8 +95,8 @@ export const MessagesContainer: FC = () => {
                 </Typography>
               </Box>
               <Typography
-                variant="body2-bold"
-                color={theme.colors['--color-primary-500']}
+                variant="body2"
+                color={theme.colors['--color-primary-400']}
                 sx={{ cursor: 'pointer' }}
                 onClick={() => handleClose(undefined, openMessage.id)}
               >

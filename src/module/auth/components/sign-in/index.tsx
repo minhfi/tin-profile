@@ -1,17 +1,15 @@
 import { ChangeEventHandler, FC, FormEventHandler, useCallback, useState } from 'react'
 import { Box, Typography, useTheme } from '@mui/material'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import { NotAllowAuthenticated } from 'src/components/not-allow-authenticated'
 import { useValidation } from 'src/hooks/useValidation'
 import { signinSchema } from 'src/validation/auth'
 import { useAppDispatch } from 'src/hooks/redux'
 import { Button } from 'src/components/button'
-import { generate } from 'src/router/generate'
 import { Input } from 'src/components/input'
 import { AUTH_LOGIN } from 'src/store/types'
 
-import { EAuthRoutes } from '../../routes.enum'
 import { STContainer, STForm } from './styled'
 
 export const SignIn: FC = () => {
@@ -52,7 +50,7 @@ export const SignIn: FC = () => {
       <STContainer>
         <Typography variant="h2">Sign in</Typography>
 
-        <Typography align="center" className="my-32" variant="subtitle-regular">
+        <Typography align="center" className="my-32" variant="body1">
           We are the fastest growing video first marketplace for remote jobs.
         </Typography>
 
@@ -87,11 +85,8 @@ export const SignIn: FC = () => {
             Sign in
           </Button>
 
-          <Link to={generate(EAuthRoutes.FORGOT_PASSWORD)}>
-            Forgot your password?
-          </Link>
           <Box mt={1.5}>
-            <Typography variant="body1-regular" color={theme.colors['--color-neutral-theme-300']}>Don't have an account? </Typography>
+            <Typography variant="body1" color={theme.colors['--color-neutral-theme-300']}>Don't have an account? </Typography>
             <Typography
               component="a"
               onClick={() => history.push('/sign-up')}

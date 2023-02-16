@@ -18,5 +18,5 @@ export const STChildren = styled('div', {
 })<{isAuthenticated?: boolean}>(({ theme, isAuthenticated }) => `
   height: 100%;
   overflow: auto;
-  background-color: ${isAuthenticated ? theme.colors['--color-neutral-theme-100'] : theme.colors['--color-neutral-theme-50']}
+  background-color: ${isAuthenticated ? theme.colors['--color-neutral-theme-50'] : theme.colors['--color-neutral-theme-50']}
 `)

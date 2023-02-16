@@ -23,7 +23,7 @@ export const Textarea: FC<TTextareaProps> = ({ label, error, disableResize, coun
       {countLength && !!props.maxLength && (
         <Typography
           textAlign="end"
-          variant="body2-bold"
+          variant="body2"
           mt={(theme) => theme.spacing(1.5)}
         >
           {`${ref.current?.value?.length || 0}/${props.maxLength}`}

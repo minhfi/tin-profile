@@ -8,7 +8,7 @@ export const STUM = styled('div', { label: 'UserMenu' })(({ theme }) => `
   padding: ${theme.spacing(0, 2)};
   margin-top: ${theme.spacing(5)};
   cursor: pointer;
-  background-color: ${theme.colors['--color-neutral-theme-600']};
+  background-color: ${theme.colors['--color-neutral-theme-400']};
 
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ export const STUMDropdown = styled('div', {
   box-sizing: border-box;
   box-shadow: 0px 32px 64px -12px rgb(37 38 46 / 10%);
   border-radius: 16px;
-  background-color: ${theme.colors['--color-neutral-theme-600']} !important;
+  background-color: ${theme.colors['--color-neutral-theme-400']} !important;
 `)
 
 export const STUMDropdownItem = styled('div', {
@@ -62,6 +62,6 @@ export const STUMDropdownItem = styled('div', {
   }
 
   &:hover {
-    background: ${theme.colors['--color-neutral-theme-500']};
+    background: ${theme.colors['--color-neutral-theme-400']};
   }
 `)

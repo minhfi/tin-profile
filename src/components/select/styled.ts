@@ -48,11 +48,11 @@ export const STOptionIem = styled('div', {
   padding: ${theme.spacing(1)};
   background-color: ${theme.colors['--color-neutral-theme-50']};
   cursor: pointer;
-  color: ${isActive ? theme.colors['--color-neutral-theme-700'] : theme.colors['--color-neutral-theme-400']};
+  color: ${isActive ? theme.colors['--color-neutral-theme-400'] : theme.colors['--color-neutral-theme-400']};
 
   :hover {
     border-radius: 12px;
-    background-color: ${theme.colors['--color-neutral-theme-100']};
-    color: ${theme.colors['--color-neutral-theme-700']}
+    background-color: ${theme.colors['--color-neutral-theme-50']};
+    color: ${theme.colors['--color-neutral-theme-400']}
   }
 `)

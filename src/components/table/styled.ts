@@ -14,7 +14,7 @@ export const STContainer = styled('div', {
     thead tr th {
       height: 72px;
       color: ${theme.colors['--color-neutral-theme-50']};
-      background-color: ${theme.colors['--color-neutral-theme-700']};
+      background-color: ${theme.colors['--color-neutral-theme-400']};
       font-family: 'Inter';
       font-style: normal;
       font-weight: 700;
@@ -67,14 +67,14 @@ export const STContainer = styled('div', {
       font-size: 16px;
       line-height: 28px;
       border-radius: 12px;
-      color: ${theme.colors['--color-neutral-theme-700']};
+      color: ${theme.colors['--color-neutral-theme-400']};
 
       &:hover {
-        background-color: ${theme.colors['--color-primary-300']};
+        background-color: ${theme.colors['--color-primary-400']};
       }
 
       &:focus {
-        background-color: ${theme.colors['--color-primary-300']} ;
+        background-color: ${theme.colors['--color-primary-400']} ;
       }
     
       &:active {
@@ -87,7 +87,7 @@ export const STContainer = styled('div', {
       background-color: ${theme.colors['--color-primary-400']};
 
       &:hover {
-        background-color: ${theme.colors['--color-primary-300']};
+        background-color: ${theme.colors['--color-primary-400']};
       }
 
       span {

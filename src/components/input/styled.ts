@@ -2,8 +2,6 @@ import { css, styled } from '@mui/material/styles'
 import { Box, TextField as MuiTextField } from '@mui/material'
 
 export const TextField = styled(MuiTextField, { label: 'TextFieldCustom' })(({ theme }) => css`
-  ${{ ...theme.typography['body1-regular'] }};
-
   .MuiFormHelperText-root {
     margin: ${theme.spacing(1.5)} 0 0;
   }
@@ -12,8 +10,8 @@ export const TextField = styled(MuiTextField, { label: 'TextFieldCustom' })(({ t
   div.MuiInputBase-root {
     border: none;
     border-radius: 16px;
-    color: ${theme.colors['--color-neutral-theme-700']};
-    background-color: ${theme.colors['--color-neutral-theme-100']};
+    color: ${theme.colors['--color-neutral-theme-400']};
+    background-color: ${theme.colors['--color-neutral-theme-50']};
 
     input {
       padding: ${theme.spacing(2)};

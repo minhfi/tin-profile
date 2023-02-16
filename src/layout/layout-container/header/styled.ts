@@ -34,7 +34,7 @@ export const STTitleItem = styled('div', {
   gap: ${theme.spacing(1)};
 
   h4 {
-    color: ${isLastTitle ? theme.colors['--color-neutral-theme-700'] : theme.colors['--color-neutral-theme-250']};
+    color: ${isLastTitle ? theme.colors['--color-neutral-theme-400'] : theme.colors['--color-neutral-theme-400']};
   }
 
   h4:nth-of-type(2) {

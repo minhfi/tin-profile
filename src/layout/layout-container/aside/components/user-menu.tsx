@@ -32,7 +32,7 @@ export const UserMenu: FC = () => {
         {profile.pfp?.url ? <Avatar sx={{ width: 48, height: 48, cursor: 'pointer' }} src={profile.pfp?.url}/> : <Avatar sx={{ width: 48, height: 48, cursor: 'pointer' }}>{fullName?.split(' ')[0][0]}{fullName?.split(' ')[1][0]}</Avatar>}
 
         <Box display="flex" flexDirection="column">
-          <Typography variant="body1-bold" color={theme.colors['--color-neutral-theme-50']}>
+          <Typography variant="body1" color={theme.colors['--color-neutral-theme-50']}>
             {profile.firstName + ' ' + profile.lastName}
           </Typography>
         </Box>
@@ -47,11 +47,11 @@ export const UserMenu: FC = () => {
               onClick={() => handleRedirect('/setting/profile')}
             >
               <IconSetting/>
-              <Typography variant="body2-bold">Settings</Typography>
+              <Typography variant="body2">Settings</Typography>
             </STUMDropdownItem>
             <STUMDropdownItem onClick={logout}>
               <IconSignOut/>
-              <Typography variant="body2-bold">Sign out</Typography>
+              <Typography variant="body2">Sign out</Typography>
             </STUMDropdownItem>
           </STUMDropdown>
         </ClickAwayListener>

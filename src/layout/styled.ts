@@ -7,7 +7,7 @@ export const STAppLayout = styled('div', {
   display: flex;
   flex: 1 1 auto;
   flex-wrap: nowrap;
-  background-color: ${theme.colors['--color-neutral-theme-100']};
+  background-color: ${theme.colors['--color-neutral-theme-50']};
   pointer-events: ${isLoading ? 'none' : 'auto'}
 `)
 

@@ -7,8 +7,8 @@ export const TextareaCustom = styled<typeof TextareaAutosize>(TextareaAutosize, 
 })<{ disableResize?: boolean }>(({ theme, disableResize }) => `
   border: none;
   border-radius: 16px;
-  color: ${theme.colors['--color-neutral-theme-700']};
-  background-color: ${theme.colors['--color-neutral-theme-100']};
+  color: ${theme.colors['--color-neutral-theme-400']};
+  background-color: ${theme.colors['--color-neutral-theme-50']};
   padding: ${theme.spacing(1.75, 2)};
   font-family: inherit;
   font-size: inherit;

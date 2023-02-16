@@ -6,7 +6,7 @@ export const STContainer = styled('div', {
   position: relative;
   height: 52px;
   border-radius: 62px;
-  background-color: ${theme.colors['--color-neutral-theme-100']};
+  background-color: ${theme.colors['--color-neutral-theme-50']};
 `)
 
 export const STTabs = styled(Tabs, {
@@ -24,7 +24,7 @@ export const STTabs = styled(Tabs, {
   & .MuiTabs-indicator {
     bottom: 4px;
     height: 44px;
-    background-color: ${theme.colors['--color-neutral-theme-700']};
+    background-color: ${theme.colors['--color-neutral-theme-400']};
     color: ${theme.colors['--color-neutral-theme-50']};
     border-radius: 25px;
     font-weight: 700;
@@ -47,7 +47,7 @@ export const STTab = styled(Tab, {
     min-width: 120px;
     height: 52px;
     padding: ${theme.spacing(0, 2)};
-    color: ${theme.colors['--color-neutral-theme-700']};
+    color: ${theme.colors['--color-neutral-theme-400']};
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;

@@ -34,7 +34,7 @@ export const Select: FC<ISelectProps> = ({ placeholder, options, onChange, width
     <ClickAwayListener onClickAway={() => setIsOpen(false)}>
       <Box position="relative">
         <STLabel width={width} onClick={handleIsOpenDropdown}>
-          <Typography variant="body2-bold">
+          <Typography variant="body2">
             {option?.label}
           </Typography>
           <ArrowDownIcon/>
@@ -44,7 +44,7 @@ export const Select: FC<ISelectProps> = ({ placeholder, options, onChange, width
           <STOption>
             {options?.map(item => (
               <STOptionIem key={item.value} isActive={(item.value === option?.value)} onClick={() => handleSelect(item)}>
-                <Typography variant={item.value === option?.value ? 'body2-bold' : 'body2-regular'}>
+                <Typography variant={item.value === option?.value ? 'body2' : 'body2'}>
                   {item.label}
                 </Typography>
               </STOptionIem>

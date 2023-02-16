@@ -12,7 +12,7 @@ export const STAside = styled('div', {
   overflow: auto;
   box-sizing: border-box;
   padding: ${theme.spacing(5, 4)};
-  background-color: ${theme.colors['--color-neutral-theme-900']} !important;
+  background-color: ${theme.colors['--color-neutral-theme-400']} !important;
 
   display: ${props.isShow ? 'flex' : 'none'};
   flex-direction: column;
@@ -45,7 +45,7 @@ export const STAsideItem = styled(NavLink, {
   box-sizing: border-box;
   cursor: pointer;
   color: ${theme.colors[`--color-neutral-theme-${props.active ? 50 : 300}`]};
-  background: ${props.active ? theme.colors['--color-neutral-theme-600'] : 'unset'};
+  background: ${props.active ? theme.colors['--color-neutral-theme-400'] : 'unset'};
   
   svg {
     margin-right: ${theme.spacing(2)};

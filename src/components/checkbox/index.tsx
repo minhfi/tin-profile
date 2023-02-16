@@ -12,7 +12,7 @@ export const Checkbox: FC<CheckboxProps & {label?: string}> = (props) => {
           marginLeft: 0,
 
           '& .Mui-checked + span': {
-            color: (theme) => theme.colors['--color-neutral-theme-700'],
+            color: (theme) => theme.colors['--color-neutral-theme-400'],
             transition: 'all .3s ease-in-out'
           }
         }

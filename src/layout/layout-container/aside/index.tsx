@@ -78,7 +78,7 @@ export const Aside: FC = () => {
             >
               <Box display="flex" alignItems="center">
                 <Icon width={24}/>
-                <Typography variant="body1-regular">{title}</Typography>
+                <Typography variant="body1">{title}</Typography>
               </Box>
               {watchNoticeKey && (
                 <NoticeBadge watchKey={watchNoticeKey}/>
