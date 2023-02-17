@@ -45,6 +45,16 @@ export const Typography = {
     fontSize: 12,
     lineHeight: '15px'
   },
+  sbutitle1: {
+    fontWeight: 500,
+    fontSize: 24,
+    lineHeight: '29px'
+  },
+  sbutitle2: {
+    fontWeight: 500,
+    fontSize: 18,
+    lineHeight: '21px'
+  },
   body1: {
     fontWeight: 400,
     fontSize: 16,
@@ -69,6 +79,8 @@ export const Typography = {
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
+    'sbutitle1': React.CSSProperties
+    'sbutitle2': React.CSSProperties
     'body1': React.CSSProperties
     'body2': React.CSSProperties
     'body3': React.CSSProperties
@@ -77,6 +89,8 @@ declare module '@mui/material/styles' {
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
+    ['sbutitle1']?: React.CSSProperties
+    ['sbutitle2']?: React.CSSProperties
     ['body1']?: React.CSSProperties
     ['body2']?: React.CSSProperties
     ['body3']?: React.CSSProperties
@@ -87,6 +101,8 @@ declare module '@mui/material/styles' {
 // Update the Typography's variant prop options
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
+    'sbutitle1': true
+    'sbutitle2': true
     'body1': true
     'body2': true
     'body3': true

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Box, Typography, useTheme } from '@mui/material'
-import { IconArrowLeft, IconArrowRight } from 'src/icons'
+import { IconArrowDown, IconArrowLeft, IconArrowRight, IconFacebook, IconInstagram, IconZalo } from 'src/icons'
 import { Button } from 'src/components/button'
 import JobPosition from 'src/images/job-position.png'
 import NameSite from 'src/images/name-site.png'
@@ -10,10 +10,14 @@ import SmartCarGo from 'src/images/smartcargo.png'
 import Matbao from 'src/images/matbao.png'
 import SportE from 'src/images/sporte.png'
 import Hellven from 'src/images/hellven.png'
+import SmallAvatar from 'src/images/small-avatar.png'
+import Signature from 'src/images/signature.png'
 
-import { STBlock1, STBlock2, STBlock3, STContainer, STInfoLeft, STSmartCarGo, STInfoRight, STMatBao, STSportE, STHellven, STBlock4, STBlock5, STProfile } from './styled'
+import { STBlock1, STBlock2, STBlock3, STContainer, STInfoLeft, STSmartCarGo, STInfoRight, STMatBao, STSportE, STHellven, STBlock4, STBlock5, STBlock6, STBlock7 } from './styled'
 import { TitleSection } from '../title-section'
 import { Skill } from '../skill'
+import { Profile } from '../profile'
+import { WorkFlow } from '../work-flow'
 
 export const Home: FC = () => {
   const theme = useTheme()
@@ -26,6 +30,7 @@ export const Home: FC = () => {
         <img src={JobPosition} alt="job position"/>
         <img src={Avatar} alt="avatar"/>
       </STBlock1>
+
       <STBlock2>
         <TitleSection number="01" title="ABOUT ME"/>
         <Skill/>
@@ -62,6 +67,7 @@ export const Home: FC = () => {
         </Box>
         <Button>CHECK OUT PROFILE</Button>
       </STBlock2>
+
       <STBlock3>
         <TitleSection number="02" title="WORK"/>
         <Box width={697} display="flex" flexDirection="column">
@@ -112,12 +118,13 @@ export const Home: FC = () => {
             </STInfoRight>
           </STHellven>
         </Box>
-
         <Button>READ MORE</Button>
       </STBlock3>
+
       <STBlock4>
         <TitleSection number="03" title="MY COMPANY"/>
       </STBlock4>
+
       <STBlock5>
         <TitleSection number="04" title="MY PROFILE"/>
         <Box display="flex" flexDirection="column" gap={2} width={926} mt={10}>
@@ -129,10 +136,55 @@ export const Home: FC = () => {
           </Typography>
         </Box>
         <Button sx={{ margin: '39px 0 79px' }}>Hire me</Button>
-        <STProfile>
-          sfwerf
-        </STProfile>
+        <Profile/>
       </STBlock5>
+
+      <STBlock6>
+        <TitleSection number="05" title="WORK FLOW"/>
+        <WorkFlow/>
+      </STBlock6>
+
+      <STBlock7>
+        <TitleSection number="06" title="CONTACT"/>
+        <Box marginTop="61px">
+          <img src={SmallAvatar} alt="avatar"/>
+        </Box>
+        <Box mt={2} mb={4}>
+          <img src={Signature} alt="signature"/>
+        </Box>
+        <Typography variant="sbutitle2" color={theme.colors['--color-neutral-theme-400']}>
+          tinnguyen.cip@gmail.com
+        </Typography>
+        <Box mt={4} mb={4} display="flex" flexDirection="column" alignItems="center" gap={1}>
+          <IconArrowDown/>
+          <Typography variant="sbutitle1" color={theme.colors['--color-neutral-theme-400']}>
+            039 406 4522
+          </Typography>
+          <Typography variant="sbutitle1" color={theme.colors['--color-neutral-theme-300']} sx={{ opacity: 0.4 }}>
+            036 8395 300
+          </Typography>
+        </Box>
+        <Box display="flex" alignItems="center" gap={5}>
+          <IconFacebook/>
+          <IconZalo/>
+          <IconInstagram/>
+        </Box>
+        <Box mt={9} mb={4} display="flex" flexDirection="column" alignItems="center" gap={1}>
+          <Typography variant="body2" color={theme.colors['--color-neutral-theme-300']}>
+            Liên hệ tôi, nếu hồ sơ của tôi làm bạn hứng thú!
+          </Typography>
+          <Box
+            width={58}
+            sx={{
+              height: '1px',
+              background: theme.colors['--color-black']
+            }}
+          />
+        </Box>
+        <Typography variant="body2" color={theme.colors['--color-neutral-theme-300']}>
+          Porforlio - NGUYEN DANG TIN - 2022
+        </Typography>
+      </STBlock7>
     </STContainer>
   )
 }

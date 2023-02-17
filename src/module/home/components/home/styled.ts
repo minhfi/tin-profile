@@ -1,6 +1,7 @@
 import { styled } from '@mui/material'
 import BgBlock2 from 'src/images/bg-block2.png'
 import BgBlock4 from 'src/images/bg-block4.png'
+import BgBlock6 from 'src/images/bg-block6.png'
 
 export const STContainer = styled('div', {
   label: 'Container'
@@ -170,9 +171,27 @@ export const STBlock5 = styled('div', {
   align-items: center;
   `)
 
-export const STProfile = styled('div', {
-  label: 'Profile'
+export const STBlock6 = styled('div', {
+  label: 'Block6'
 })(({ theme }) => `
+    position: relative;
+    z-index: 1;
+    height: 2262px;
+    padding: 261px 0 302px;
+    background: url(${BgBlock6});
+  
     display: flex;
-    gap: 50px
+    flex-direction: column;
+    align-items: center;
 `)
+
+export const STBlock7 = styled('div', {
+  label: 'Block7'
+})(({ theme }) => `
+  position: relative;
+  padding: 21px 0 26px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  `)
