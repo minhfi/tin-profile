@@ -18,6 +18,7 @@ import { TitleSection } from '../title-section'
 import { Skill } from '../skill'
 import { Profile } from '../profile'
 import { WorkFlow } from '../work-flow'
+import { Company } from '../company'
 
 export const Home: FC = () => {
   const theme = useTheme()
@@ -123,6 +124,7 @@ export const Home: FC = () => {
 
       <STBlock4>
         <TitleSection number="03" title="MY COMPANY"/>
+        <Company/>
       </STBlock4>
 
       <STBlock5>

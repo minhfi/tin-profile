@@ -6,6 +6,11 @@ export const STContainer = styled('div', {
   display: flex;
   gap: 80px;
   margin: 110px 0 128px;
+
+  @media (max-width: 769px) {
+    flex-wrap: wrap;
+    margin: 40px 0 40px;
+  }
 `)
 
 export const STSkillItem = styled('div', {

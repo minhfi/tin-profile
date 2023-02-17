@@ -44,6 +44,10 @@ export const STBlock2 = styled('div', {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 769px) {
+    padding: 137px 0 108px;
+  }
   `)
 
 export const STBlock3 = styled('div', {
@@ -179,7 +183,7 @@ export const STBlock6 = styled('div', {
     height: 2262px;
     padding: 261px 0 302px;
     background: url(${BgBlock6});
-  
+
     display: flex;
     flex-direction: column;
     align-items: center;

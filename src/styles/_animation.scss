@@ -28,3 +28,25 @@
 .ringing-animation {
   @include animation(ringing 3s .1s ease-in-out infinite);
 }
+
+.main-fade-up-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.main-fade-up-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.main-fade-up-exit {
+  opacity: 0.3;
+  transform: translateY(0%);
+}
+.main-fade-up-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.main-fade-up-enter-active,
+.main-fade-up-exit-active {
+  transition: opacity 400ms, transform 800ms;
+}
+
