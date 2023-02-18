@@ -21,20 +21,20 @@ const ButtonBase = styled(Button)<IButtonProps>(({ theme, ...props }) => css`
 
 export const ButtonPrimary = styled(ButtonBase)<IButtonProps>(({ theme, ...props }) => `
   color: ${theme.colors['--color-primary-400']} !important;
-  background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
+  background-color: ${props.background || 'transparent'} ;
   border: 1px solid ${props.background ? 'transparent' : theme.colors['--color-neutral-theme-200']};
   border-radius: 30px;
 
   &:hover {
-    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
+    background-color: ${props.background || 'transparent'} ;
   }
 
   &:focus {
-    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
+    background-color: ${props.background || 'transparent'} ;
   }
 
   &:active {
-    background-color: ${props.background || `${theme.colors['--color-white']} !important`} ;
+    background-color: ${props.background || 'transparent'} ;
   }
 
   &:disabled {

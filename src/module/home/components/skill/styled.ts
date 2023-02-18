@@ -8,8 +8,10 @@ export const STContainer = styled('div', {
   margin: 110px 0 128px;
 
   @media (max-width: 769px) {
+    width: 320px;
     flex-wrap: wrap;
-    margin: 40px 0 40px;
+    margin: 40px 0 60px;
+    justify-content: space-between;
   }
 `)
 

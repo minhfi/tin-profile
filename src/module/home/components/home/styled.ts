@@ -9,6 +9,7 @@ export const STContainer = styled('div', {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: auto;
 `)
 
 export const STBlock1 = styled('div', {
@@ -28,6 +29,12 @@ export const STBlock1 = styled('div', {
   img:nth-of-type(4) {
     position: absolute;
     right: 0
+  }
+
+  @media (max-width: 769px) {
+    img:nth-of-type(4) {
+      display: none
+    }
   }
 `)
 
