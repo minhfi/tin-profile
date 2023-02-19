@@ -64,7 +64,7 @@ export const Home: FC = () => {
               color: theme.colors['--color-neutral-theme-400']
             }}
           >
-            Tôi tên là Đăng Tín (Lupin) và tôi đến từ Việt Nam.Tôi là một Nhà thiết kế Sản phẩm và tương tác người dùng với hơn 4 năm kinh nghiệm làm việc trong Photography, Thiết kế Đồ họa và Thiết kế Sản phẩm Kỹ thuật số như thiết kế Thương hiệu, Trang web và Ứng dụng Di động.
+            Tôi tên là Đăng Tín (Lupin) và tôi đến từ Việt Nam. Tôi là một Nhà thiết kế Sản phẩm và tương tác người dùng với hơn 4 năm kinh nghiệm làm việc trong Photography, Thiết kế Đồ họa và Thiết kế Sản phẩm Kỹ thuật số như thiết kế Thương hiệu, Trang web và Ứng dụng Di động.
           </Typography>
           <Typography
             variant="body1"
@@ -97,7 +97,7 @@ export const Home: FC = () => {
               <Typography variant="body2">Branding - UI/UX Design</Typography>
               <Typography variant="h4">SmartCargo</Typography>
               <Box display="flex" alignItems="center" gap={1} onClick={() => handleRedirect()}>
-                ?            <Typography variant="body2">Go to Project</Typography>
+                <Typography variant="body2">Go to Project</Typography>
                 <IconArrowRight/>
               </Box>
             </STInfoLeft>
@@ -110,7 +110,7 @@ export const Home: FC = () => {
                 <Typography variant="body2">UI/UX Design</Typography>
                 <Typography variant="h4">MẮT BÃO</Typography>
                 <Box display="flex" alignItems="center" gap={1} onClick={() => handleRedirect()}>
-                  ?              <IconArrowLeft/>
+                  <IconArrowLeft/>
                   <Typography variant="body2">Go to Project</Typography>
                 </Box>
               </STInfoRight>
@@ -120,7 +120,7 @@ export const Home: FC = () => {
                 <Typography variant="body2">UI/UX Design - NFTs - Play to Earn</Typography>
                 <Typography variant="h4">SPORTE</Typography>
                 <Box display="flex" alignItems="center" gap={1} onClick={() => handleRedirect()}>
-                  ?              <Typography variant="body2">Go to Project</Typography>
+                  <Typography variant="body2">Go to Project</Typography>
                   <IconArrowRight/>
                 </Box>
               </STInfoLeft>
@@ -133,7 +133,7 @@ export const Home: FC = () => {
               <Typography variant="body2">UI/UX Design - NFTs - Turn Base</Typography>
               <Typography variant="h4">HELLVEN</Typography>
               <Box display="flex" alignItems="center" gap={1} onClick={() => handleRedirect()}>
-                ?            <IconArrowLeft/>
+                <IconArrowLeft/>
                 <Typography variant="body2">Go to Project</Typography>
               </Box>
             </STInfoRight>
