@@ -48,7 +48,7 @@ export const Skill:FC = () => {
           <IconGraphicsDesign/>
         </Box>
         <Box display="flex" gap={0.5}>
-          <Typography variant="h4" sx={{ color: `${theme.colors['--color-primary-400']} !important` }}>Graphichcs</Typography>
+          <Typography variant="h4" sx={{ color: `${theme.colors['--color-primary-400']} !important` }}>Graphics</Typography>
           <Typography variant="meta1" sx={{ color: `${theme.colors['--color-neutral-theme-300']} !important` }}>Design</Typography>
         </Box>
       </STSkillItem>
