@@ -13,7 +13,7 @@ export const Skill:FC = () => {
   const skilles: ISkilles[] = [
     {
       icon: IconLogoForlio,
-      title: 'Logoforlio'
+      title: 'Logofolio'
     },
     {
       icon: IconTeamLeader,

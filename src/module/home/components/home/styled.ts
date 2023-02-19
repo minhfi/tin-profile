@@ -12,6 +12,17 @@ export const STContainer = styled('div', {
   overflow: auto;
 `)
 
+export const STScroll = styled('div', {
+  label: 'Scroll'
+})(({ theme }) => `
+  position: fixed;
+  top:65%; 
+  left:50%; 
+  transform:translate(-50%, -50%); 
+  z-index: 10;
+  cursor: pointer;
+`)
+
 export const STBlock1 = styled('div', {
   label: 'Block1'
 })(({ theme }) => `
