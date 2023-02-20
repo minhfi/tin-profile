@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Typography } from '@mui/material'
 import { IconDoubleArrowUp } from 'src/icons'
@@ -17,6 +17,10 @@ export const Sidebar: FC<ISidebar> = ({ handleScrollTop, section }) => {
     setLanguage(ln)
     i18n.changeLanguage(ln)
   }
+
+  useEffect(() => {
+    i18n.changeLanguage('en')
+  }, [])
 
   return (
     <STContainer>
