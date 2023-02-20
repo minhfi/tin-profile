@@ -1,5 +1,6 @@
 import { FC, useRef, useState } from 'react'
 import { CSSTransition, SwitchTransition } from 'react-transition-group'
+import { useTranslation } from 'react-i18next'
 import { Box, Typography, useTheme } from '@mui/material'
 import { IconArrowRight, IconBGArrowDown } from 'src/icons'
 import CompanyBanner1 from 'src/images/company-banner1.png'
@@ -10,6 +11,7 @@ import { STCircle, STCompany, STCompanyBanner, STCompanyItem, STCompanyWrapped, 
 
 export const Company: FC = () => {
   const theme = useTheme()
+  const { t } = useTranslation()
   const nodeRef = useRef(null)
   const [slide, setSlide] = useState<number>(0)
 
@@ -60,7 +62,9 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>ARR - an viet song hong</Typography>
-                      <Typography variant="body2" lineHeight="22px">Web UI development is based on the concept of multi-fashion products developed by An Viet Song Hong Joint Stock Company (ARR for short).</Typography>
+                      <Typography variant="body2" lineHeight="22px">
+                        {t('company_anvietsonghong_content1')}
+                      </Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">Jan 2016 -  May 2016</Typography>
@@ -82,7 +86,9 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Graphic Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>kem nghia</Typography>
-                      <Typography variant="body2" lineHeight="22px">Graphic design and visual support for multi-channel promotion. Provide publications and develop features that need to be changed on the website.</Typography>
+                      <Typography variant="body2" lineHeight="22px">
+                        {t('company_kemnghia_content1')}
+                      </Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">May 2016 - May 2017</Typography>
@@ -104,7 +110,9 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Collaborators UI</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>MAT BAO</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Contributor reviews and improves an existing website's user interface:</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">
+                        {t('company_matbao_content1')}
+                      </Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">- Clean</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">- Modern</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">UX & Mobile Friendly.</Typography>
@@ -129,8 +137,8 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>VIET TIEN LAB GROUP</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Website: Renovate the commercial website, create a connection system, and provide customer support and lookup.</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">App:  Developing an online event platform and incorporating loyalty ideas into the app.</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">{t('company_viettien_content1')}</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">{t('company_viettien_content2')}</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">May 2017 - Feb 2018</Typography>
@@ -183,9 +191,9 @@ export const Company: FC = () => {
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>GMarks viet nam</Typography>
                       <ul>
-                        <Typography component="li" variant="body2" lineHeight="22px">Research and build a CRM software system.</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Developing an application ecosystem for business digitization: CRM and ERP.</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Investment, Restructuring, and Corporate Governance Platform.</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">{t('company_gmark_content1')}</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">{t('company_gmark_content2')}</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">{t('company_gmark_content3')}</Typography>
                       </ul>
                     </Box>
                     <Box>
@@ -208,10 +216,10 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>Propzy</Typography>
-                      <Typography variant="body2" lineHeight="22px">Website: Renovate a commercial website. optimize the user experience. App: Shared experience across two platforms (web and app).</Typography>
+                      <Typography variant="body2" lineHeight="22px">{t('company_propzy_content1')}</Typography>
                       <ul>
-                        <Typography component="li" variant="body2" lineHeight="22px">App Propzy</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">The platform connects Residents (App) to Management Board (Web).</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">{t('company_propzy_content2')}</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">{t('company_propzy_content3')}</Typography>
                       </ul>
                     </Box>
                     <Box>
@@ -234,7 +242,7 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Collaborators UI</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>ocb - Oricombank</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Collaborators build CRM systems, distribution management systems, and operations for the department.</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">{t('company_ocb_content1')}</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">Feb 2019</Typography>
@@ -257,10 +265,10 @@ export const Company: FC = () => {
                       <Typography variant="body2">Leader Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>sTA - TECHNOLOGY & APPLICATION</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">
-                        Branding: Conduct research and change the overall image of the brand from brand guidelines to official guidelines.
+                        {t('company_sta_content1')}
                       </Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">
-                        App & Web: Developing an ecosystem for logistics Connect the Customer and the Forwarder.
+                        {t('company_sta_content2')}
                       </Typography>
                     </Box>
                     <Box>
@@ -313,17 +321,17 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Leader UI/UX</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>Dinovative</Typography>
-                      <Typography variant="body2" lineHeight="22px">Building Blockchain Products:</Typography>
+                      <Typography variant="body2" lineHeight="22px">{t('company_dinovative_content1')}</Typography>
                       <ul>
                         <Typography component="li" variant="body2" lineHeight="22px">Play to Earn</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">Click to Earn</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">Turn Based - Auto check</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">VR - Metaverse</Typography>
                       </ul>
-                      <Typography variant="body2" lineHeight="22px">Developing a system of affiliated businesses:</Typography>
+                      <Typography variant="body2" lineHeight="22px">{t('company_dinovative_content2')}</Typography>
                       <ul>
                         <Typography component="li" variant="body2" lineHeight="22px">Viettin Bank</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Vietjet - Flying is right!</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">Vietjet - {t('company_dinovative_content3')}</Typography>
                       </ul>
                     </Box>
                     <Box>

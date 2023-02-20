@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Box, Typography, useTheme } from '@mui/material'
 import { IconArrowRightGray, IconCup, IconEducation, IconExperience, IconSkill } from 'src/icons'
 import Education from 'src/images/education.png'
@@ -7,13 +8,14 @@ import { STContainer, STFlexColumn, STReadMore, STSkill } from './styled'
 
 export const Profile: FC = () => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   return (
     <STContainer>
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconCup/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>ACHIEVEMENTS</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>{t('profile_title1')}</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} width={200}>
           <STFlexColumn>
@@ -26,7 +28,7 @@ export const Profile: FC = () => {
                 marginTop: 1
               }}
             >
-              At DesignCrowd, I've Won Over 100 Design Contests.
+              {t('profile_win_content')}
             </Typography>
           </STFlexColumn>
           <STFlexColumn mt={4} gap={1}>
@@ -89,7 +91,7 @@ export const Profile: FC = () => {
           <Box height={40} display="flex" alignItems="flex-end">
             <IconExperience/>
           </Box>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>EXPERIENCE</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>{t('profile_title2')}</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} width={278}>
           <STFlexColumn gap={1}>
@@ -175,7 +177,7 @@ export const Profile: FC = () => {
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconEducation/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>EDUCATION</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>{t('profile_title3')}</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7}>
           <img src={Education} alt="education"/>
@@ -185,7 +187,7 @@ export const Profile: FC = () => {
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconSkill/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>SKILL</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>{t('profile_title4')}</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} gap={5}>
           <STSkill>

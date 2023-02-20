@@ -9,6 +9,7 @@ import { getThemeMode } from './store/selectors'
 import { useAppSelector } from './hooks/redux'
 import { AppLayout } from './layout'
 import { store } from './store'
+import './i18n'
 
 const AppTheme: FC = () => {
   const paletteMode = useAppSelector(getThemeMode)

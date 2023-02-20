@@ -18,15 +18,11 @@ export const STScroll = styled('div', {
   label: 'Scroll'
 })(({ theme }) => `
   position: absolute;
-  top:45%; 
+  top:100px; 
   left:50%; 
   transform:translate(-50%, -50%); 
   z-index: 10;
   cursor: pointer;
-
-  @media (max-width: 1441px) {
-    top: 65%;
-  }
 `)
 
 export const STBlock1 = styled('div', {
