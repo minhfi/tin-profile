@@ -60,7 +60,7 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>ARR - an viet song hong</Typography>
-                      <Typography variant="body2" lineHeight="22px">Phát triển UI Web dựa trên khái niệm đa sản phẩm thời trang của Công ty Cổ phần An Việt Sông Hồng (viết tắt là ARR).</Typography>
+                      <Typography variant="body2" lineHeight="22px">Web UI development is based on the concept of multi-fashion products developed by An Viet Song Hong Joint Stock Company (ARR for short).</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">Jan 2016 -  May 2016</Typography>
@@ -82,7 +82,7 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Graphic Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>kem nghia</Typography>
-                      <Typography variant="body2" lineHeight="22px">Thiết kế đồ hoạ, visual hổ trợ quảng bá đa kênh. Cung cấp các ấn phẩm, phát triển tính năng cần thay đổi trên Website.</Typography>
+                      <Typography variant="body2" lineHeight="22px">Graphic design and visual support for multi-channel promotion. Provide publications and develop features that need to be changed on the website.</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">May 2016 - May 2017</Typography>
@@ -104,7 +104,7 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Collaborators UI</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>MAT BAO</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Cộng tác viên đánh giá và cải tạo giao diện người dùng cho trang Web hiện tại:</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Contributor reviews and improves an existing website's user interface:</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">- Clean</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">- Modern</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">UX & Mobile Friendly.</Typography>
@@ -129,8 +129,8 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>VIET TIEN LAB GROUP</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Website: Cải tạo website thương mại, xây dựng hệ thống kết nối, hỗ trợ và tra cứu từ khách hàng.</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">App: Phát triển nền tảng tổ chức sự kiện trực tuyến, kết hợp ý tưởng Loyalti trên ứng dụng.</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Website: Renovate the commercial website, create a connection system, and provide customer support and lookup.</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">App:  Developing an online event platform and incorporating loyalty ideas into the app.</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">May 2017 - Feb 2018</Typography>
@@ -183,9 +183,9 @@ export const Company: FC = () => {
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>GMarks viet nam</Typography>
                       <ul>
-                        <Typography component="li" variant="body2" lineHeight="22px">Nghiên cứu và xây dựng hệ thống CRM Software.</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Phát triển Hệ sinh thái Ứng dụng cho số hoá doanh nghiệp: CRM, ERP.</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Nền tảng Đầu tư, Tái cấu trúc & Quản trị Doanh nghiệp .</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">Research and build a CRM software system.</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">Developing an application ecosystem for business digitization: CRM and ERP.</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">Investment, Restructuring, and Corporate Governance Platform.</Typography>
                       </ul>
                     </Box>
                     <Box>
@@ -208,10 +208,10 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">UI/UX Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>Propzy</Typography>
-                      <Typography variant="body2" lineHeight="22px">Website: Cải tạo Website thương mại. Tối ưu hoá trãi nghiệm người dùng. App: Đồng trải nghiệm trên 2 nền tảng Web & App.</Typography>
+                      <Typography variant="body2" lineHeight="22px">Website: Renovate a commercial website. optimize the user experience. App: Shared experience across two platforms (web and app).</Typography>
                       <ul>
                         <Typography component="li" variant="body2" lineHeight="22px">App Propzy</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Nền tảng kết nối Cư dân (App) đến BQL (Website), và ngược lại.</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">The platform connects Residents (App) to Management Board (Web).</Typography>
                       </ul>
                     </Box>
                     <Box>
@@ -234,7 +234,7 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Collaborators UI</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>ocb - Oricombank</Typography>
-                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Cộng tác viên xây dựng hệ thống CRM, quản lý phân phối và điều hành cho nội bộ phận.</Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">Collaborators build CRM systems, distribution management systems, and operations for the department.</Typography>
                     </Box>
                     <Box>
                       <Typography variant="meta3">Feb 2019</Typography>
@@ -257,7 +257,10 @@ export const Company: FC = () => {
                       <Typography variant="body2">Leader Design</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>sTA - TECHNOLOGY & APPLICATION</Typography>
                       <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">
-                        Branding: Ngiên cứu, và thay đổi toàn bộ hình ảnh thương hiệu từ Brand Guidline đến Offical. App & Web: Phát triển hệ sinh thái phục vụ cho Logistics. Kết nối Customer & Forwarder trên hai nền tảng App và Web.
+                        Branding: Conduct research and change the overall image of the brand from brand guidelines to official guidelines.
+                      </Typography>
+                      <Typography variant="body2" lineHeight="22px" letterSpacing="0.2px">
+                        App & Web: Developing an ecosystem for logistics Connect the Customer and the Forwarder.
                       </Typography>
                     </Box>
                     <Box>
@@ -310,17 +313,17 @@ export const Company: FC = () => {
                     <Box>
                       <Typography variant="body2">Leader UI/UX</Typography>
                       <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']} sx={{ margin: '8px 0 16px', textTransform: 'uppercase' }}>Dinovative</Typography>
-                      <Typography variant="body2" lineHeight="22px">Xây dựng các Product thuộc về Blockchain:</Typography>
+                      <Typography variant="body2" lineHeight="22px">Building Blockchain Products:</Typography>
                       <ul>
                         <Typography component="li" variant="body2" lineHeight="22px">Play to Earn</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">Click to Earn</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">Turn Based - Auto check</Typography>
                         <Typography component="li" variant="body2" lineHeight="22px">VR - Metaverse</Typography>
                       </ul>
-                      <Typography variant="body2" lineHeight="22px">Phát triển hệ thống các doanh nghiệp liên kết:</Typography>
+                      <Typography variant="body2" lineHeight="22px">Developing a system of affiliated businesses:</Typography>
                       <ul>
                         <Typography component="li" variant="body2" lineHeight="22px">Viettin Bank</Typography>
-                        <Typography component="li" variant="body2" lineHeight="22px">Vietjet - Bay là thích ngay!</Typography>
+                        <Typography component="li" variant="body2" lineHeight="22px">Vietjet - Flying is right!</Typography>
                       </ul>
                     </Box>
                     <Box>

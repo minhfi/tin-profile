@@ -13,7 +13,7 @@ export const Profile: FC = () => {
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconCup/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>THÀNH TÍCH</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>ACHIEVEMENTS</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} width={200}>
           <STFlexColumn>
@@ -26,7 +26,7 @@ export const Profile: FC = () => {
                 marginTop: 1
               }}
             >
-              Chiến thắng hơn 100 cuộc thi Thiết kế tại DesignCrowd
+              At DesignCrowd, I've Won Over 100 Design Contests.
             </Typography>
           </STFlexColumn>
           <STFlexColumn mt={4} gap={1}>
@@ -89,7 +89,7 @@ export const Profile: FC = () => {
           <Box height={40} display="flex" alignItems="flex-end">
             <IconExperience/>
           </Box>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>KINH NGHIỆM</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>EXPERIENCE</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} width={278}>
           <STFlexColumn gap={1}>
@@ -104,7 +104,7 @@ export const Profile: FC = () => {
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" gap={0.5}>
-              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Kiềm Nghĩa</Typography>
+              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Kiem Nghia</Typography>
               <Typography
                 variant="body1"
                 color={theme.colors['--color-primary-400']}
@@ -116,7 +116,7 @@ export const Profile: FC = () => {
           <STFlexColumn mt={4} gap={1}>
             <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Mid-Level</Typography>
             <Box display="flex" alignItems="center" gap={0.5}>
-              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Mắt Bão</Typography>
+              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Mat Bao</Typography>
               <Typography
                 variant="body1"
                 color={theme.colors['--color-primary-400']}
@@ -125,7 +125,7 @@ export const Profile: FC = () => {
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" gap={0.5}>
-              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Việt Tiên Lab Group</Typography>
+              <Typography variant="body1" color={theme.colors['--color-neutral-theme-400']}>Viet Tien Lab Group</Typography>
               <Typography
                 variant="body1"
                 color={theme.colors['--color-primary-400']}
@@ -175,7 +175,7 @@ export const Profile: FC = () => {
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconEducation/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>HỌC VẤN</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>EDUCATION</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7}>
           <img src={Education} alt="education"/>
@@ -185,7 +185,7 @@ export const Profile: FC = () => {
       <STFlexColumn>
         <STFlexColumn height={86} justifyContent="space-between">
           <IconSkill/>
-          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>KỸ NĂNG</Typography>
+          <Typography variant="h2" color={theme.colors['--color-neutral-theme-400']}>SKILL</Typography>
         </STFlexColumn>
         <STFlexColumn mt={7} gap={5}>
           <STSkill>

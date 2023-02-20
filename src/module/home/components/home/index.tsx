@@ -64,7 +64,7 @@ export const Home: FC = () => {
               color: theme.colors['--color-neutral-theme-400']
             }}
           >
-            Tôi tên là Đăng Tín (Lupin) và tôi đến từ Việt Nam. Tôi là một Nhà thiết kế Sản phẩm và tương tác người dùng với hơn 4 năm kinh nghiệm làm việc trong Photography, Thiết kế Đồ họa và Thiết kế Sản phẩm Kỹ thuật số như thiết kế Thương hiệu, Trang web và Ứng dụng Di động.
+            My name is Dang Tin (Lupin), and I am from Vietnam. I am a product and user interaction designer with over 4 years of experience working in photography, graphic design, and technical product design such as brand design, website design, and mobile application design.
           </Typography>
           <Typography
             variant="body1"
@@ -74,7 +74,7 @@ export const Home: FC = () => {
               color: theme.colors['--color-neutral-theme-400']
             }}
           >
-            Để trở thành Chuyên viên về Product Designer như ngày hôm nay, tôi hiểu nhu cầu của khách hàng, sau đó tôi nghiên cứu và đưa ra giải pháp tốt nhất với UI/ UX trong sản phẩm.
+            To become the product designer I am today, I first understood the customer's needs, then did research to come up with the best solution for the UI and UX of the product.
           </Typography>
           <Typography
             variant="body1"
@@ -83,7 +83,7 @@ export const Home: FC = () => {
               color: theme.colors['--color-neutral-theme-400']
             }}
           >
-            Đối với tôi, Thiết kế không chỉ là làm cho mọi thứ trông đẹp và tốt. Nó là một công cụ mạnh mẽ để giao tiếp và có ảnh hưởng lớn đến sự thành công của bất kỳ dự án nào. Nó giúp cung cấp các sản phẩm và dịch vụ chất lượng cao dẫn đến trải nghiệm sử dụng tuyệt vời của con người tốt hơn và mang lại sự hài lòng từ khách hàng.
+            For me, design is more than just making things look good. It is a powerful tool for communication and has a great influence on the success of any project. It helps to provide high-quality products and services that lead to a better human user experience and customer satisfaction.
           </Typography>
         </Box>
         <Button onClick={() => handleScroll(5100)}>CHECK OUT PROFILE</Button>
@@ -108,7 +108,7 @@ export const Home: FC = () => {
               <img src={Matbao} alt="matbao"/>
               <STInfoRight>
                 <Typography variant="body2">UI/UX Design</Typography>
-                <Typography variant="h4">MẮT BÃO</Typography>
+                <Typography variant="h4">MAT BAO</Typography>
                 <Box display="flex" alignItems="center" gap={1} onClick={() => handleRedirect()}>
                   <IconArrowLeft/>
                   <Typography variant="body2">Go to Project</Typography>
@@ -151,10 +151,10 @@ export const Home: FC = () => {
         <TitleSection number="04" title="MY PROFILE"/>
         <Box display="flex" flexDirection="column" gap={2} width={926} mt={10}>
           <Typography variant="body1" textAlign="center" color={theme.colors['--color-neutral-theme-400']}>
-            Với tôi, Design không chỉ là tạo nên mọi thứ trông đẹp và tốt. Đó là công cụ đắc lực cho sự giao tiếp và là sự ảnh hưởng lớn cho thành công của mọi dự án. Nó giúp cung cấp sản phẩm và dịch vụ chất lượng cao dẫn đến trải nghiệm người dùng tốt hơn và mang đến sự hài lòng từ khách hàng.
+            Design, to me, is more than just making things look nice. It is a powerful tool for communication and has a great influence on the success of any project. It helps to deliver high-quality products and services that lead to a better user experience and customer satisfaction.
           </Typography>
           <Typography variant="body1" textAlign="center" color={theme.colors['--color-neutral-theme-400']}>
-            Tôi là UI/UX Designer! Tôi có hơn 4 năm kinh nghiệm trong thiết kế trải nghiệm người dùng trên đa nền tảng Application,Website & Software. Tôi thông thạo các phần mềm đi đầu cho việc thiết kế ở thời điểm hiện tại. Ngoài ra, kinh nghiệm của tôi không chỉ dừng lại ở việc nghiên cứu và thiết kế, mà còn là quan điểm của doanh nghiệp. Chính vì vậy, tôi luôn thúc đẩy bởi niềm đam mê và cốt lõi giá trị mỗi sản phẩm của doanh nghiệp liên kết kết với khách hàng để tạo ra những giao diện người dùng hiện đại và thật tiện ích cho đến mục tiêu cuối cùng.
+            I'm a UI/UX Designer! I have more than 4 years of experience in user experience design for cross-platform applications, websites, and software. I am fluent in the leading software for design at the present time. In addition, my experience is not only in research and design but also from a business perspective. As a result, I am always motivated by the passion and core values of each business product associated with customers to create modern and useful user interfaces in order to achieve the end goal.
           </Typography>
         </Box>
         <Button sx={{ margin: '39px 0 79px' }} onClick={() => handleScroll(8500)}>Hire me</Button>
@@ -193,7 +193,7 @@ export const Home: FC = () => {
         </Box>
         <Box mt={9} mb={4} display="flex" flexDirection="column" alignItems="center" gap={1}>
           <Typography variant="body2" color={theme.colors['--color-neutral-theme-300']}>
-            Liên hệ tôi, nếu hồ sơ của tôi làm bạn hứng thú!
+            Contact me if my profile interests you!
           </Typography>
           <Box
             width={58}

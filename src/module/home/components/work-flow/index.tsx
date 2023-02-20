@@ -21,8 +21,8 @@ export const WorkFlow:FC = () => {
       >
         <STInfo>
           <IconList/>
-          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Tiếp nhận</Typography>
-          <Typography variant="body2">Tiếp nhận thông tin dự án, sản phẩm cần xây dựng.</Typography>
+          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Receive</Typography>
+          <Typography variant="body2">Receive information about projects and products to be built.</Typography>
         </STInfo>
       </Box>
       <Box
@@ -34,8 +34,8 @@ export const WorkFlow:FC = () => {
       >
         <STInfo textAlign="left" alignItems="start">
           <IconSearch/>
-          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Xử lí</Typography>
-          <Typography variant="body2">Xử lí thông tin, tạo môi trường Research.</Typography>
+          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Treatment</Typography>
+          <Typography variant="body2">Processing information, creating a research environment.</Typography>
         </STInfo>
       </Box>
       <Box
@@ -47,8 +47,8 @@ export const WorkFlow:FC = () => {
       >
         <STInfo>
           <IconIdea/>
-          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Lên ý tưởng</Typography>
-          <Typography variant="body2">Khởi tạo StyleCape, lên các ý tưởng cần thiết từ chi tiết đến tổng thể.</Typography>
+          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Come up with ideas</Typography>
+          <Typography variant="body2">Start StyleCape and gather all of the necessary ideas, from detail to overall.</Typography>
         </STInfo>
       </Box>
       <Box
@@ -61,8 +61,8 @@ export const WorkFlow:FC = () => {
         <STInfo textAlign="left" alignItems="start">
           <IconDesign/>
           <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Design</Typography>
-          <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UX</Typography> - Phát triển các mẫu thử giải quyết Painpoint của User.</Typography>
-          <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UI</Typography> - Khởi tạo hệ thống thiết kế UI - Visual.</Typography>
+          <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UX</Typography> - Develop prototypes that solve the user's pain points.</Typography>
+          <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UI</Typography> - Initialize UI (Visual Design System).</Typography>
         </STInfo>
       </Box>
       <Box
@@ -74,8 +74,8 @@ export const WorkFlow:FC = () => {
       >
         <STInfo>
           <IconRocket/>
-          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Kiểm tra & Xuất bản</Typography>
-          <Typography variant="body2">Kiểm tra yêu cầu {'->'} Xuất bản các phiên bản thử nghiệm {'->'} Thu thập phản hồi {'->'} Đưa ra phiên bản cuối.</Typography>
+          <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Test & Publish</Typography>
+          <Typography variant="body2">Test Requirements {'->'}  Test Versions {'->'} Feedback  {'->'} Release Final Version.</Typography>
         </STInfo>
       </Box>
     </STContainer>

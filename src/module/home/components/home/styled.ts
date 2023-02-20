@@ -1,7 +1,10 @@
 import { styled } from '@mui/material'
 import BgBlock2 from 'src/images/bg-block2.png'
+import BgBlock21920 from 'src/images/bg-block2-1920.png'
 import BgBlock4 from 'src/images/bg-block4.png'
+import BgBlock41920 from 'src/images/bg-block4-1920.png'
 import BgBlock6 from 'src/images/bg-block6.png'
+import BgBlock61920 from 'src/images/bg-block6-1920.png'
 
 export const STContainer = styled('div', {
   label: 'Container'
@@ -15,12 +18,16 @@ export const STContainer = styled('div', {
 export const STScroll = styled('div', {
   label: 'Scroll'
 })(({ theme }) => `
-  position: fixed;
-  top:65%; 
+  position: absolute;
+  top:45%; 
   left:50%; 
   transform:translate(-50%, -50%); 
   z-index: 10;
   cursor: pointer;
+
+  @media (max-width: 1441px) {
+    top: 65%;
+  }
 `)
 
 export const STBlock1 = styled('div', {
@@ -57,11 +64,17 @@ export const STBlock2 = styled('div', {
   height: 1312px;
   margin-top: 108px;
   padding: 237px 0 208px;
-  background: url(${BgBlock2});
+  background: url(${BgBlock21920});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1441px) {
+    background: url(${BgBlock2});
+  }
 
   @media (max-width: 769px) {
     padding: 137px 0 108px;
@@ -175,7 +188,13 @@ export const STBlock4 = styled('div', {
   z-index: 1;
   height: 1377px;
   padding: 317px 0 283px;
-  background: url(${BgBlock4});
+  background: url(${BgBlock41920});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 1441px) {
+    background: url(${BgBlock4});
+  }
 
   display: flex;
   flex-direction: column;
@@ -200,7 +219,13 @@ export const STBlock6 = styled('div', {
     z-index: 1;
     height: 2262px;
     padding: 261px 0 302px;
-    background: url(${BgBlock6});
+    background: url(${BgBlock61920});
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1441px) {
+      background: url(${BgBlock6});
+    }
 
     display: flex;
     flex-direction: column;
