@@ -1,6 +1,5 @@
 import { styled } from '@mui/material'
 import BgBlock2 from 'src/images/bg-block2.png'
-import BgBlock21920 from 'src/images/bg-block2-1920.png'
 import BgBlock4 from 'src/images/bg-block4.png'
 import BgBlock41920 from 'src/images/bg-block4-1920.png'
 import BgBlock6 from 'src/images/bg-block6.png'
@@ -61,19 +60,17 @@ export const STBlock2 = styled('div', {
 })(({ theme }) => `
   position: relative;
   z-index: 1;
-  height: 1312px;
+  height: 1422px;
   margin-top: 108px;
   padding: 237px 0 208px;
-  background: url(${BgBlock21920});
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url(${BgBlock2});
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: 1441px) {
-    background: url(${BgBlock2});
+    background-position: center;
   }
 
   @media (max-width: 769px) {
