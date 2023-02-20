@@ -9,7 +9,6 @@ export const STContainer = styled('div', {
   right: 58px; 
   transform:translate(-50%, -50%); 
   z-index: 10;
-  cursor: pointer;
 
   display: flex;
   flex-direction: column;
@@ -25,6 +24,7 @@ export const STScrollTop = styled('div', {
   flex-direction: column;
   align-items: center;
   height: ${isShow ? '31px' : 0};
+  cursor: pointer;
 `)
 
 export const STCircle = styled('div', {
