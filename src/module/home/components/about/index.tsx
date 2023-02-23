@@ -1,13 +1,14 @@
 import { FC, SVGProps } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Box, Typography, useTheme } from '@mui/material'
-import { IconApp, IconGraphicsDesign, IconLogoForlio, IconTeamLeader, IconUXUIDesign, IconWeb } from 'src/icons'
+import { IconApp, IconGraphicsDesign, IconLogoForlio, IconMouse, IconTeamLeader, IconUXUIDesign, IconWeb } from 'src/icons'
 import { Button } from 'src/components/button'
 
-import { STContainer, STDescription, STSkillItem, STSkillWrapped } from './styled'
+import { STContainer, STDescription, STScroll, STSkillItem, STSkillWrapped } from './styled'
 import { Title } from '../title'
 
 interface IAbout {
-  handleScroll: (val: number) => void
+  handleScrollTop: (val: number) => void
 }
 
 interface ISkilles {
@@ -15,8 +16,9 @@ interface ISkilles {
   title: string
 }
 
-export const About:FC<IAbout> = ({ handleScroll }) => {
+export const About:FC<IAbout> = ({ handleScrollTop }) => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   const skilles: ISkilles[] = [
     {
@@ -43,6 +45,10 @@ export const About:FC<IAbout> = ({ handleScroll }) => {
 
   return (
     <STContainer>
+      <STScroll>
+        <IconMouse/>
+      </STScroll>
+
       <Title number="01" title="ABOUT ME"/>
 
       <STSkillWrapped>
@@ -67,17 +73,17 @@ export const About:FC<IAbout> = ({ handleScroll }) => {
 
       <STDescription>
         <Typography variant="h3">
-          My name is Dang Tin (Lupin), and I am from Vietnam. I am a product and user interaction designer with over 4 years of experience working in photography, graphic design, and technical product design such as brand design, website design, and mobile application design.
+          {t('about_me_description1')}
         </Typography>
         <Typography variant="body1">
-          To become the product designer I am today, I first understood the customer's needs, then did research to come up with the best solution for the UI and UX of the product.
+          {t('about_me_description2')}
         </Typography>
         <Typography variant="body1">
-          For me, design is more than just making things look good. It is a powerful tool for communication and has a great influence on the success of any project. It helps to provide high-quality products and services that lead to a better human user experience and customer satisfaction.
+          {t('about_me_description3')}
         </Typography>
       </STDescription>
 
-      <Button onClick={() => handleScroll(5100)}>CHECK OUT PROFILE</Button>
+      <Button onClick={() => handleScrollTop(5100)}>CHECK OUT PROFILE</Button>
     </STContainer>
   )
 }

@@ -1,23 +1,20 @@
-import { FC } from 'react'
-import { Box, Typography, useTheme } from '@mui/material'
-import { IconArrowDown, IconInstagram, IconMouse, IconSkype, IconZalo } from 'src/icons'
+import { FC, useState } from 'react'
 import JobPosition from 'src/images/job-position.png'
 import NameSite from 'src/images/name-site.png'
 import Avatar from 'src/images/avatar.png'
 import Logo from 'src/images/logo.png'
-import SmallAvatar from 'src/images/small-avatar.png'
-import Signature from 'src/images/signature.png'
 
-import { STHeader, STContainer, STBlock7, STScroll } from './styled'
-import { Title } from '../title'
+import { STHeader, STContainer } from './styled'
 import { Company } from '../company'
 import { About } from '../about'
 import { Work } from '../work'
 import { Profile } from '../profile'
 import { WorkFlow } from '../work-flow'
+import { Sidebar } from '../sidebar'
+import { Contact } from '../contact'
 
 export const Home: FC = () => {
-  const theme = useTheme()
+  const [section, setSection] = useState<number>(0)
 
   const handleRedirect = (url?: string) => {
     if (url) {
@@ -27,7 +24,32 @@ export const Home: FC = () => {
     return window.open('https://www.behance.net/dangtinnguyen1208')
   }
 
-  const handleScroll = (top: number) => {
+  const handleScroll = () => {
+    const element = document.getElementById('home')
+    const scrollTop = element?.scrollTop || 0
+
+    switch (true) {
+      case scrollTop < 300:
+        return setSection(0)
+      case scrollTop > 300 && scrollTop < 1500:
+        return setSection(1)
+      case scrollTop > 1500 && scrollTop < 3700:
+        return setSection(2)
+      case scrollTop > 3700 && scrollTop < 4800:
+        return setSection(3)
+      case scrollTop > 4800 && scrollTop < 6200:
+        return setSection(4)
+      case scrollTop > 6200 && scrollTop < 8200:
+        return setSection(5)
+      case scrollTop > 8200:
+        return setSection(6)
+
+      default:
+        return setSection(0)
+    }
+  }
+
+  const handleScrollTop = (top: number) => {
     const element = document.getElementById('home')
 
     return element?.scrollTo({
@@ -37,11 +59,8 @@ export const Home: FC = () => {
   }
 
   return (
-    <STContainer id="home">
-      <STScroll>
-        <IconMouse/>
-      </STScroll>
-
+    <STContainer id="home" onScroll={handleScroll}>
+      <Sidebar section={section} handleScrollTop={handleScrollTop}/>
       <STHeader>
         <img src={Logo} alt="logo"/>
         <img src={NameSite} alt="name site"/>
@@ -49,53 +68,12 @@ export const Home: FC = () => {
         <img src={Avatar} alt="avatar"/>
       </STHeader>
 
-      <About handleScroll={handleScroll}/>
+      <About handleScrollTop={handleScrollTop}/>
       <Work handleRedirect={handleRedirect}/>
       <Company/>
-      <Profile handleScroll={handleScroll}/>
+      <Profile handleScrollTop={handleScrollTop}/>
       <WorkFlow/>
-
-      <STBlock7>
-        <Title number="06" title="CONTACT"/>
-        <Box marginTop="61px">
-          <img src={SmallAvatar} alt="avatar"/>
-        </Box>
-        <Box mt={2} mb={4}>
-          <img src={Signature} alt="signature"/>
-        </Box>
-        <Typography variant="sbutitle2" color={theme.colors['--color-neutral-theme-400']}>
-          tinnguyen.cip@gmail.com
-        </Typography>
-        <Box mt={4} mb={4} display="flex" flexDirection="column" alignItems="center" gap={1}>
-          <IconArrowDown/>
-          <Typography variant="sbutitle1" color={theme.colors['--color-neutral-theme-400']}>
-            039 406 4522
-          </Typography>
-          <Typography variant="sbutitle1" color={theme.colors['--color-neutral-theme-300']} sx={{ opacity: 0.4 }}>
-            036 8395 300
-          </Typography>
-        </Box>
-        <Box display="flex" alignItems="center" gap={5}>
-          <IconInstagram onClick={() => handleRedirect('https://web.telegram.org/k/#5237689770')} cursor="pointer"/>
-          <IconZalo onClick={() => handleRedirect('https://zalo.me/0394064522')} cursor="pointer"/>
-          <IconSkype onClick={() => handleRedirect('https://join.skype.com/invite/f24JM29zLf2n')} cursor="pointer"/>
-        </Box>
-        <Box mt={9} mb={4} display="flex" flexDirection="column" alignItems="center" gap={1}>
-          <Typography variant="body2" color={theme.colors['--color-neutral-theme-300']}>
-            Contact me if my profile interests you!
-          </Typography>
-          <Box
-            width={58}
-            sx={{
-              height: '1px',
-              background: theme.colors['--color-black']
-            }}
-          />
-        </Box>
-        <Typography variant="body2" color={theme.colors['--color-neutral-theme-300']}>
-          Portfolio - NGUYEN DANG TIN - 2022
-        </Typography>
-      </STBlock7>
+      <Contact handleRedirect={handleRedirect}/>
     </STContainer>
   )
 }

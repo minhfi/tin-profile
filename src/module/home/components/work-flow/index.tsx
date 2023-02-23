@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Box, Typography, useTheme } from '@mui/material'
 import { IconDesign, IconIdea, IconList, IconSearch, IconRocket } from 'src/icons'
 import BGWorkFlow from 'src/images/bg-workflow.png'
@@ -8,6 +9,7 @@ import { Title } from '../title'
 
 export const WorkFlow:FC = () => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   return (
     <STContainer>
@@ -24,8 +26,8 @@ export const WorkFlow:FC = () => {
         >
           <STInfo>
             <IconList/>
-            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Receive</Typography>
-            <Typography variant="body2">Receive information about projects and products to be built.</Typography>
+            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>{t('workflow_title1')}</Typography>
+            <Typography variant="body2">{t('workflow_content1')}</Typography>
           </STInfo>
         </Box>
         <Box
@@ -37,8 +39,8 @@ export const WorkFlow:FC = () => {
         >
           <STInfo textAlign="left" alignItems="start">
             <IconSearch/>
-            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Treatment</Typography>
-            <Typography variant="body2">Processing information, creating a research environment.</Typography>
+            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>{t('workflow_title2')}</Typography>
+            <Typography variant="body2">{t('workflow_content2')}</Typography>
           </STInfo>
         </Box>
         <Box
@@ -50,8 +52,8 @@ export const WorkFlow:FC = () => {
         >
           <STInfo>
             <IconIdea/>
-            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Come up with ideas</Typography>
-            <Typography variant="body2">Start StyleCape and gather all of the necessary ideas, from detail to overall.</Typography>
+            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>{t('workflow_title3')}</Typography>
+            <Typography variant="body2">{t('workflow_content3')}</Typography>
           </STInfo>
         </Box>
         <Box
@@ -63,22 +65,30 @@ export const WorkFlow:FC = () => {
         >
           <STInfo textAlign="left" alignItems="start">
             <IconDesign/>
-            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Design</Typography>
-            <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UX</Typography> - Develop prototypes that solve the user's pain points.</Typography>
-            <Typography variant="body2"><Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>UI</Typography> - Initialize UI (Visual Design System).</Typography>
+            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>{t('workflow_title4')}</Typography>
+            <Typography variant="body2">
+              <Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>
+                UX
+              </Typography> - {t('workflow_content4_ux')}
+            </Typography>
+            <Typography variant="body2">
+              <Typography component="span" variant="body2" color={theme.colors['--color-primary-400']}>
+                UI
+              </Typography> - {t('workflow_content4_ui')}
+            </Typography>
           </STInfo>
         </Box>
         <Box
           sx={{
             position: 'absolute',
-            bottom: '6px',
+            bottom: '-20px',
             left: 0
           }}
         >
           <STInfo>
             <IconRocket/>
-            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>Test & Publish</Typography>
-            <Typography variant="body2">Test Requirements {'->'}  Test Versions {'->'} Feedback  {'->'} Release Final Version.</Typography>
+            <Typography variant="h4" color={theme.colors['--color-neutral-theme-400']}>{t('workflow_title5')}</Typography>
+            <Typography variant="body2">{t('workflow_content5')}</Typography>
           </STInfo>
         </Box>
       </STWorkFlow>

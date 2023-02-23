@@ -9,21 +9,6 @@ export const STContainer = styled('div', {
   overflow: auto;
 `)
 
-export const STScroll = styled('div', {
-  label: 'Scroll'
-})(({ theme }) => `
-  position: absolute;
-  top:45%; 
-  left:50%; 
-  transform:translate(-50%, -50%); 
-  z-index: 10;
-  cursor: pointer;
-
-  @media (max-width: 1441px) {
-    top: 65%;
-  }
-`)
-
 export const STHeader = styled('div', {
   label: 'Header'
 })(({ theme }) => `
@@ -49,14 +34,3 @@ export const STHeader = styled('div', {
     }
   }
 `)
-
-export const STBlock7 = styled('div', {
-  label: 'Block7'
-})(({ theme }) => `
-  position: relative;
-  padding: 21px 0 26px;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  `)

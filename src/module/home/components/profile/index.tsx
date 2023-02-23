@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Box, Typography, useTheme } from '@mui/material'
 import { IconArrowRightGray, IconCup, IconEducation, IconExperience, IconSkill } from 'src/icons'
 import { Button } from 'src/components/button'
@@ -8,29 +9,30 @@ import { STContainer, STDescription, STFlexColumn, STProfile, STReadMore, STSkil
 import { Title } from '../title'
 
 interface IProfile {
-  handleScroll: (val: number) => void
+  handleScrollTop: (val: number) => void
 }
 
-export const Profile: FC<IProfile> = ({ handleScroll }) => {
+export const Profile: FC<IProfile> = ({ handleScrollTop }) => {
   const theme = useTheme()
+  const { t } = useTranslation()
 
   return (
     <STContainer>
       <Title number="04" title="MY PROFILE"/>
       <STDescription>
         <Typography variant="body1">
-          Design, to me, is more than just making things look nice. It is a powerful tool for communication and has a great influence on the success of any project. It helps to deliver high-quality products and services that lead to a better user experience and customer satisfaction.
+          {t('profile_description1')}
         </Typography>
         <Typography variant="body1">
-          I'm a UI/UX Designer! I have more than 4 years of experience in user experience design for cross-platform applications, websites, and software. I am fluent in the leading software for design at the present time. In addition, my experience is not only in research and design but also from a business perspective. As a result, I am always motivated by the passion and core values of each business product associated with customers to create modern and useful user interfaces in order to achieve the end goal.
+          {t('profile_description2')}
         </Typography>
       </STDescription>
-      <Button sx={{ margin: '39px 0 79px' }} onClick={() => handleScroll(8500)}>Hire me</Button>
+      <Button sx={{ margin: '39px 0 79px' }} onClick={() => handleScrollTop(8500)}>Hire me</Button>
       <STProfile>
         <STFlexColumn>
           <STFlexColumn height={86} justifyContent="space-between">
             <IconCup/>
-            <Typography variant="h2">ACHIEVEMENTS</Typography>
+            <Typography variant="h2">{t('profile_title1')}</Typography>
           </STFlexColumn>
           <STFlexColumn mt={7} width={200}>
             <STFlexColumn>
@@ -43,7 +45,7 @@ export const Profile: FC<IProfile> = ({ handleScroll }) => {
                   marginTop: 1
                 }}
               >
-                At DesignCrowd, I've Won Over 100 Design Contests.
+                {t('profile_win_content')}
               </Typography>
             </STFlexColumn>
             <STFlexColumn mt={4} gap={1}>
@@ -106,7 +108,7 @@ export const Profile: FC<IProfile> = ({ handleScroll }) => {
             <Box height={40} display="flex" alignItems="flex-end">
               <IconExperience/>
             </Box>
-            <Typography variant="h2">EXPERIENCE</Typography>
+            <Typography variant="h2">{t('profile_title2')}</Typography>
           </STFlexColumn>
           <STFlexColumn mt={7} width={278}>
             <STFlexColumn gap={1}>
@@ -192,7 +194,7 @@ export const Profile: FC<IProfile> = ({ handleScroll }) => {
         <STFlexColumn>
           <STFlexColumn height={86} justifyContent="space-between">
             <IconEducation/>
-            <Typography variant="h2">EDUCATION</Typography>
+            <Typography variant="h2">{t('profile_title3')}</Typography>
           </STFlexColumn>
           <STFlexColumn mt={7}>
             <img src={Education} alt="education"/>
@@ -202,7 +204,7 @@ export const Profile: FC<IProfile> = ({ handleScroll }) => {
         <STFlexColumn>
           <STFlexColumn height={86} justifyContent="space-between">
             <IconSkill/>
-            <Typography variant="h2">SKILL</Typography>
+            <Typography variant="h2">{t('profile_title4')}</Typography>
           </STFlexColumn>
           <STFlexColumn mt={7} gap={5}>
             <STSkill>

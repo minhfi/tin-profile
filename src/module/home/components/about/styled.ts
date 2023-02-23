@@ -24,6 +24,17 @@ export const STContainer = styled('div', {
   }
 `)
 
+export const STScroll = styled('div', {
+  label: 'Scroll'
+})(({ theme }) => `
+  position: absolute;
+  top:100px; 
+  left:50%; 
+  transform:translate(-50%, -50%); 
+  z-index: 10;
+  cursor: pointer;
+`)
+
 export const STSkillWrapped = styled('div', {
   label: 'SkillWrapped'
 })(({ theme }) => `
