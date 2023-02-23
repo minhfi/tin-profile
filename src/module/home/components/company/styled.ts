@@ -1,7 +1,29 @@
 import { Box, styled } from '@mui/material'
+import BgBlock4 from 'src/images/bg-block4.png'
+import BgBlock41920 from 'src/images/bg-block4-1920.png'
 
 export const STContainer = styled('div', {
   label: 'Container'
+})(({ theme }) => `
+  position: relative;
+  z-index: 1;
+  height: 1377px;
+  padding: 317px 0 283px;
+  background: url(${BgBlock41920});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: 1441px) {
+    background: url(${BgBlock4});
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  `)
+
+export const STSection = styled('div', {
+  label: 'Section'
 })(({ theme }) => `
   position: relative;
   display: flex;
@@ -23,6 +45,27 @@ export const STCompanyBanner = styled('div', {
     position: relative;
     width: 294px;
     height: 592px;
+
+    div {
+      width: 170px;
+      position: absolute;
+      top: 128px;
+      left: 62px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: ${theme.spacing(1)};
+
+      p {
+        color: ${theme.colors['--color-neutral-theme-400']};
+      }
+
+      span {
+        color: ${theme.colors['--color-neutral-theme-400']};
+        text-align: center;
+      }
+    }
 `)
 
 export const STCompanyWrapped = styled(Box, {
@@ -49,6 +92,25 @@ export const STCompanyItem = styled(Box, {
 
     li::marker {
       font-size: 10px;
+    }
+  }
+
+  div:nth-of-type(1) {
+    h4 {
+      margin: ${theme.spacing(1, 0, 2)};
+      color: ${theme.colors['--color-neutral-theme-400']};
+      text-transform: uppercase
+    }
+  }
+
+  div:nth-of-type(2) {
+    div {
+      width: 135px;
+      margin-top: ${theme.spacing(0.75)};
+      padding-top: ${theme.spacing(0.5)};
+      border-top: 0.75px solid ${theme.colors['--color-neutral-theme-400']};
+      display: flex;
+      justify-content: flex-end;
     }
   }
 `)

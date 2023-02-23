@@ -1,18 +1,18 @@
 import { FC } from 'react'
-import { Typography } from '@mui/material'
-import { STContainer, STSubSectionNumber } from './styled'
+import { Box, Typography } from '@mui/material'
+import { STContainer } from './styled'
 
 interface ITitle {
   number: string
   title: string
 }
 
-export const TitleSection:FC<ITitle> = ({ number, title }) => {
+export const Title:FC<ITitle> = ({ number, title }) => {
   return (
     <STContainer>
-      <STSubSectionNumber>
+      <Box>
         <Typography variant="h6">{number}</Typography>
-      </STSubSectionNumber>
+      </Box>
       <Typography variant="h1">
         {title}
       </Typography>
